@@ -2,9 +2,8 @@
 # Created by Boda Venkata Nikith
 # Modified by Dr. D.Vo On 10/09/22
 #
-# Modifyied By: Student Name
-# Modified On: Enter Date here
-#
+# Modifyied By: Dustin Schulte
+# Modified On: 10/14/22
 # Python program to implement Playfair Cipher Encryption
 
 
@@ -152,13 +151,13 @@ def encryptByPlayfairCipher(Matrix, plainList):
         CipherText1.append(cipher)
     return CipherText1
 
-text_Plain = 'mynameisdvo'
+text_Plain = "YOURLIFEISYOURLIFEDONTLETITBECLUBBEDINTODANKSUBMISSIONBEONTHEWATCHTHEREAREWAYSOUTTHEREISLIGHTSOMEWHEREITMAYNOTBEMUCHLIGHTBUTITBEATSTHEDARKNESSBEONTHEWATCHTHEGODSWILLOFERYOUCHANCESKNOWTHEMTAKETHEMYOUCANTBEATDEATHBUTYOUCANBEATDEATHINLIFESOMETIMESANDTHEMOREOFTENYOULEARNTODOITTHEMORELIGHTTHEREWILLBEYOURLIFEISYOURLIFEKNOWITWHILEYOUHAVEITYOUAREMARVELOUSTHEGODSWAITTODELIGHTINYOU"
 text_Plain = removeSpaces(toLowerCase(text_Plain))
 PlainTextList = Diagraph(FillerLetter(text_Plain))
 if len(PlainTextList[-1]) != 2:
     PlainTextList[-1] = PlainTextList[-1]+'z'
 
-key = "harry"
+key = "laughing"
 print("Key text:", key)
 key = toLowerCase(key)
 Matrix = generateKeyTable(key, list1)
@@ -170,5 +169,3 @@ CipherText = ""
 for i in CipherList:
     CipherText += i
 print("CipherText:", CipherText)
-
-
