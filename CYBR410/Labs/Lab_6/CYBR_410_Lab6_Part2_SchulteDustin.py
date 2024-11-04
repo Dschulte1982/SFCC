@@ -2,8 +2,8 @@
 # Created by Pranay Arora
 # Modified by Dr. D.Vo 11/07/2022, 11/04/2024
 #
-# Modified By:     Student Name
-# Modified On:     Enter Date here
+# Modified By:     Dustin Schulte
+# Modified On:     11/04/2024
 
 # Function to find the gcd of two integers using Euclidean algorithm
 def gcd(p, q):
@@ -35,17 +35,17 @@ def chineseremaindertheorem(dq, dp, p, q, c):
     m1 = pow(c, dp, p)
     # Message part 2
     m2 = pow(c, dq, q)
-    
+
     qinv = modinv(q, p)
     h = (qinv * (m1 - m2)) % p
     m = m2 + h * q
     return m
 
 # ENTER your Driver Code HERE:
-P = 53
-Q = 31
-E = 65537
-C = 1614
+P = 953
+Q = 2063
+E = 42
+C = 275382
 D = modinv(E, lcm(P-1,Q-1))
 print("private key d =", D)
 
