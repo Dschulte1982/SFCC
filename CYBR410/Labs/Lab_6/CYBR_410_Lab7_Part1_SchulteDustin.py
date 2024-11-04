@@ -2,8 +2,8 @@
 # Created by Pranay Arora
 # Modified by Dr. D.Vo 11/06/2022; 11/04/2024
 #
-# Modifyied By:    Student Name
-# Modified On:     Enter Date here
+# Modifyied By:    Dustin Schulte
+# Modified On:     11/04/2024
 #
 # Python for RSA asymmetric cryptographic algorithm.
 # For demonstration, values are relatively
@@ -11,7 +11,7 @@
 
 import math
 
-def gcd(a, h):   
+def gcd(a, h):
     temp = 0
     while(1):
         temp = a % h
@@ -19,7 +19,7 @@ def gcd(a, h):
             return h
         a = h
         h = temp
-        
+
 # Defined RSA parameters as:
 p = 3                # Step 2
 q = 7                # Step 2
@@ -27,7 +27,7 @@ q = 7                # Step 2
 n = p*q                 # Step 3
 print("n value = ", n)  # Step 3 Check
 
-e =      # Step 4; ENTER smaller e the better HERE
+e = 2     # Step 4; ENTER smaller e the better HERE
 
 phi = (p-1)*(q-1)          # Step 6
 print("phi value = ", phi) # Step 6 check
@@ -50,7 +50,7 @@ d = ((k*phi)+ 1)/e      # Step 6
 print("d value = ", d)  # Step 6 Check
 
 # Message to be encrypted
-msg =              # Step 8: ENTER numerical under 20 HERE
+msg = 14             # Step 8: ENTER numerical under 20 HERE
 print("")
 print("Message data = ", msg)
 
@@ -63,6 +63,3 @@ print("Encrypted data = ", c)
 m = pow(c, d)
 m = math.fmod(m, n)
 print("Original Message Sent = ", m)
-
-
-
